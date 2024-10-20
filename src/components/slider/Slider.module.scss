@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.nav {
+  z-index: 99;
+}
+.content {
+  z-index: 99;
+  padding: 15px;
+  width: 80%;
+  height: 100%;
+  margin-right: 20%;
+  color: white;
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    #000000d8 0%,
+    #0000006e 70%,
+    #00000000 100%
+  );
+
+  .sub-content {
+    margin-right: 40%;
+    margin-top: -30%;
+    /* margin-left: ; */
+    color: #fff1e6;
+    // color: #000;
+    .subtitle {
+      display: flex;
+      /* display: block; */
+      margin-left: 5%;
+      font-size: 18px;
+      margin-bottom: 8px;
+      font-weight: 200;
+      p {
+        font-family: "Josefin Sans", sans-serif;
+      }
+    }
+    .title {
+      display: flex;
+      margin-left: 5%;
+
+      font-size: 28px;
+      font-weight: 500;
+      p {
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+    .text {
+      display: flex;
+      margin-left: 5%;
+      p {
+        font-family: "Montserrat", sans-serif;
+      }
+    }
+  }
+}
+.swiper {
+  display: block;
+  max-height: 1030px;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  height: 500px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #f8cda8;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+.empty-space {
+  height: 500px;
+}
+@media (max-width: 1650px) {
+  .content {
+    .sub-content {
+      .title {
+        margin-top: 75%;
+      }
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .content {
+    .sub-content {
+      margin-left: 50px;
+
+      .title {
+        margin-top: 85%;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .content {
+    .sub-content {
+      margin-right: 20%;
+      margin-left: 50px;
+      margin-right: 20%;
+      .title {
+        margin-top: 40%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .content {
+    .sub-content {
+      margin-right: 10%;
+      .title {
+        margin-top: 40%;
+      }
+      .text {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 888px) {
+  .content {
+    .sub-content {
+      .title {
+        margin-top: 40%;
+      }
+      .text {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .content {
+    .sub-content {
+      margin-right: 10%;
+      .title {
+        margin-top: 30%;
+        font-size: 37px;
+      }
+      .text {
+        width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .content {
+    .sub-content {
+      margin-right: 10%;
+      .title {
+        font-size: 30px;
+        margin-top: 20%;
+      }
+      .subtitle {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .content {
+    .sub-content {
+      margin-right: 10%;
+      .title {
+        margin-top: 20%;
+        font-size: 23px;
+      }
+      .text {
+        font-size: 16px;
+      }
+    }
+  }
+}
