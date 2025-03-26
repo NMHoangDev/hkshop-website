@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.container {
+  background-color: white;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+
+  .cardForCard:first-child {
+    margin-top: -18px;
+  }
+}
+
+.table-wrapper {
+  border: solid 1px gray;
+}
+
+#centercontent-wrapper {
+  position: relative;
+}
+
+.single-column {
+  right: 0;
+  width: 100%;
+}
+
+div,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+#shoppingCartDefault {
+  margin-bottom: 20px;
+}
+
+#centercontent-wrapper header {
+  margin: 0 0 0px;
+  position: relative;
+  text-align: left;
+}
+
+header {
+  display: block;
+}
+
+#centercontent-wrapper header:before {
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+#centercontent-wrapper header > h1 {
+  margin-top: 20px;
+  border-bottom: 1px solid #212121;
+  font-weight: bold;
+  margin-bottom: 9px;
+  padding-bottom: 8px;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+// #centercontent-wrapper h1,
+// table#cartContentsDisplay tr th,
+// a,
+// a:visited,
+// #product_name a {
+//     color: #428bca;
+// }
+
+#centercontent-wrapper .table-responsive {
+  border: medium none;
+  margin: 0;
+}
+
+.table-responsive {
+  min-height: 0.01%;
+  overflow-x: auto;
+  // font-size: 30px;
+}
+
+#shoppingCartDefault table {
+  margin: 0;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border: 0;
+}
+
+table {
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+#cartContentsDisplay tr,
+#prevOrders tr {
+  background: #fff;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.table#cartContentsDisplay tr th {
+  font-size: 14px;
+  padding: 10px;
+}
+
+.table#cartContentsDisplay tr th {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tbody > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+.table th {
+  padding: 9px 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.tableHeading .tbl-center {
+  text-align: center;
+}
+
+/* Thuộc tính padding cho cột "Sản phẩm" */
+.table#cartContentsDisplay th:nth-child(1) {
+  width: 40%;
+  // padding-right: 20px;
+  /* Căn phải */
+}
+
+/* Thuộc tính padding cho cột "Giá" */
+.table#cartContentsDisplay th:nth-child(2) {
+  width: 20%;
+  // padding-left: 60px;
+  /* Căn trái */
+}
+
+.table#cartContentsDisplay th:nth-child(3) {
+  width: 7%;
+  // padding-left: 60px;
+  /* Căn trái */
+}
+
+.table#cartContentsDisplay th:nth-child(4) {
+  width: 3%;
+  // padding-left: 60px;
+  /* Căn trái */
+}
+
+.table#cartContentsDisplay th:nth-child(5) {
+  width: 25%;
+  // padding-left: 60px;
+  /* Căn trái */
+}
+
+.table#cartContentsDisplay th:nth-child(6) {
+  width: 5%;
+  // padding-left: 60px;
+  /* Căn trái */
+}
+
+#cartContentsDisplay tr {
+  background: #fff;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.table a {
+  color: #0f75bd;
+}
+
+a {
+  outline: medium none;
+  text-decoration: none;
+  transition: color 450ms ease-in-out 0s, background-color 450ms ease-in-out 0s;
+}
+
+//total product
+.cartTotalDisplay,
+#cartSubTotal {
+  color: #ff5757;
+}
+
+#cartSubTotal {
+  font-size: 20.8px;
+  line-height: 40px;
+  padding-right: 70.4px;
+  text-align: right;
+  font-weight: 600;
+}
+
+@media (max-width: 440px) {
+  #cartSubTotal {
+    font-size: 16px;
+  }
+}
+
+#cartSubTotal {
+  border-bottom: 1px solid #e9e9e9;
+}
+
+#cartSubTotal {
+  background-color: #f9f9f9;
+  height: 40px;
+}

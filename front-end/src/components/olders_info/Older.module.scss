@@ -1,0 +1,211 @@
+.wrapper {
+  position: relative;
+  font-size: 16px;
+
+  .main-older {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #f9f9f9; /* Màu nền nhạt */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+
+    .info_older {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .topic_older {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #e86507;
+
+        .icon {
+          font-size: 2rem;
+          color: #ab5500;
+        }
+
+        #topic {
+          display: flex;
+          flex-direction: column;
+          font-size: 24px;
+          font-weight: 600;
+
+          #boder {
+            width: 50px;
+            height: 4px;
+            background-color: #ab5500;
+            margin-top: 5px;
+            border-radius: 2px;
+          }
+        }
+      }
+
+      .infor_tranf {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          p {
+            font-size: 16px;
+            color: #6c6c6c;
+
+            span {
+              font-size: 18px;
+              font-weight: 600;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+
+    .btn_detail_older {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .button {
+        width: 200px;
+        height: 45px;
+        border: none;
+        border-radius: 8px;
+        background-color: #209978; /* Màu xanh nổi bật */
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        &:hover {
+          background-color: #17795e; /* Màu xanh đậm hơn */
+        }
+
+        &:active {
+          background-color: #146c54; /* Hiệu ứng khi nhấn */
+        }
+
+        .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .detail_older {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    .header-detail {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      border-bottom: 1px solid #e0e0e0;
+
+      .product {
+        width: 40%;
+        text-align: left;
+      }
+
+      .unit-price,
+      .quantity,
+      .total {
+        width: 20%;
+        text-align: center;
+      }
+    }
+
+    #cartSubTotal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      border-top: 1px solid #e0e0e0;
+
+      #text {
+        font-size: 18px;
+        color: #6c6c6c;
+      }
+
+      #value {
+        font-size: 20px;
+        color: #ff0000;
+
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          color: #7d7d7d;
+        }
+      }
+    }
+
+    .receiver_info {
+      padding: 20px;
+      font-size: 16px;
+
+      .topic_user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #e86507;
+
+        .icon {
+          font-size: 2rem;
+          color: #ab5500;
+        }
+
+        #topic {
+          font-size: 24px;
+          font-weight: 600;
+
+          #boder {
+            width: 50px;
+            height: 4px;
+            background-color: #ab5500;
+            margin-top: 5px;
+            border-radius: 2px;
+          }
+        }
+      }
+
+      p {
+        font-size: 16px;
+        color: #6c6c6c;
+
+        span {
+          font-size: 18px;
+          font-weight: 600;
+          color: #000;
+        }
+      }
+    }
+  }
+}

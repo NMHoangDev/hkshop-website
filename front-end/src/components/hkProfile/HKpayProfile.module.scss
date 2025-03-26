@@ -1,0 +1,31 @@
+.wrapper {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+.title {
+  color: #000;
+}
+.avatar {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 3px;
+  border: solid 2px #ccc;
+}
+.wrapper-avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.information {
+  display: flex;
+  flex-direction: column;
+}
+.balance {
+  color: #000;
+}

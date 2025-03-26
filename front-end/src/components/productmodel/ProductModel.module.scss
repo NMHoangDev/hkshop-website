@@ -1,0 +1,147 @@
+// .container1 {
+
+//     // padding-left: 15px;
+//     margin-right: auto;
+//     margin-left: auto;
+// }
+
+.container {
+  padding: 15px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  // margin-bottom: 40px;
+  border-bottom: solid 1px gainsboro;
+
+  a {
+    text-decoration: none;
+    color: #404040;
+  }
+}
+
+.nameProduct {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.nameProduct .back {
+  display: flex;
+  align-items: center;
+}
+
+.nameProduct .back {
+  margin-right: 10px;
+}
+
+.nameProduct #product_name {
+  font-size: 18px;
+}
+
+.nameProduct .product-img {
+  width: 75px;
+  height: auto;
+}
+
+.cartUnitDisplay,
+.cartQuantity,
+.cartQuantityUpdate,
+.cartRemoveItemDisplay,
+.cartTotalDisplay {
+  text-align: center;
+}
+
+.cartQuantity {
+  width: 7%;
+
+  .inputQuantity {
+    width: 40px;
+  }
+
+  @media (max-width: 410px) {
+    .inputQuantity {
+      width: 20px;
+    }
+  }
+  span:hover {
+    cursor: pointer;
+  }
+}
+
+.cartUnitDisplay {
+  width: 20%;
+}
+
+.cartQuantityUpdate {
+  width: 3%;
+}
+
+.cartRemoveItemDisplay {
+  width: 5%;
+}
+
+.cartTotalDisplay {
+  width: 25%;
+}
+
+.cartQuantity input[type="text"] {
+  text-align: center;
+  vertical-align: middle;
+  min-height: 45px;
+  margin: 0;
+  outline: none;
+  width: 20%;
+  padding: 0px 20px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+  border: 1px solid #c2c2c2;
+  color: #404040;
+  line-height: 20px;
+}
+
+.cartQuantity input:focus {
+  box-shadow: 0px 0px 10px #1e9dcb;
+}
+
+.cartQuantityUpdate input[type="image"] {
+  width: 16px;
+  height: 16px;
+}
+
+.cartTotalDisplay {
+  color: #ff5757;
+}
+
+.alert-text {
+  color: #ff4444;
+  font-style: italic;
+}
+
+.bold {
+  font-size: 15.2px;
+  font-weight: 700;
+}
+
+.cb {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.btn-shop {
+  color: black;
+}
+
+@media (max-width: 770px) {
+  #product_name {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .cartQuantityUpdate {
+    display: none;
+  }
+}

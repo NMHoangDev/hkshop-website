@@ -1,0 +1,73 @@
+.wrapper {
+  width: 320px;
+  height: 160px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0); /* Hiệu ứng nền nhẹ */
+  border: 1px solid #e0e0e0; /* Viền tinh tế */
+  border-radius: 16px; /* Bo góc lớn hơn */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease; /* Hiệu ứng hover */
+  margin: 15px;
+
+  &:hover {
+    transform: translateY(-5px); /* Hiệu ứng nổi */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tăng độ nổi */
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #666; /* Màu chữ nhẹ nhàng */
+      margin-bottom: 8px;
+    }
+
+    .value {
+      font-size: 36px;
+      font-weight: 700;
+      color: #ff6f61; /* Màu nổi bật */
+      margin-bottom: 4px;
+      text-overflow: ellipsis; /* Ẩn text tràn */
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .unit {
+      font-size: 14px;
+      font-weight: 500;
+      color: #999; /* Màu chữ phụ */
+    }
+  }
+
+  .icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(
+      145deg,
+      #ff7f73,
+      #ff5f50
+    ); /* Hiệu ứng gradient */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ cho biểu tượng */
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1); /* Hiệu ứng phóng to */
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 32px;
+    }
+  }
+}

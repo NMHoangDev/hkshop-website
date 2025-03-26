@@ -1,0 +1,243 @@
+.wrapper {
+  position: relative;
+  font-size: 16px;
+
+  .main-older {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    // background-color: rgb(250, 246, 246);
+    // height: 200px;
+    padding: 20px;
+    // align-items: center;
+    border: solid 1px #ccc;
+    .info_older {
+      // border-right: 1px solid gray;
+      width: 70%;
+      gap: 10px;
+      .topic_older {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        color: #e86507;
+        // border-bottom: 5px solid #cf6700;
+        .icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // width: 50%;
+          // height: 100%;
+          transform: scale(2.5);
+          color: #ab5500;
+        }
+        #topic {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          font-size: 25px;
+          font-weight: 600;
+          #boder {
+            width: 50px;
+            height: 4px;
+            background-color: #ab5500;
+          }
+        }
+      }
+      .infor_tranf {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 20%;
+        div {
+          p {
+            font-size: 16px;
+            color: #6c6c6c;
+            span {
+              font-size: 19px;
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+
+    .btn_detail_older {
+      width: 25%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      //  background-color: #146c54;
+      .button {
+        position: relative;
+        width: 200px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        border: 1px solid #17795e;
+        background-color: #209978;
+        overflow: hidden;
+
+        .text {
+          transition: all 0.3s;
+          transform: translateX(22px);
+          color: #fff;
+          // font-weight: 600;
+          font-size: 15px;
+        }
+
+        .icon {
+          position: absolute;
+          transform: translateX(161px);
+          height: 100%;
+          width: 39px;
+          background-color: #17795e;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s;
+
+          svg {
+            width: 20px;
+            fill: #fff;
+            display: block;
+          }
+        }
+      }
+
+      .button:hover {
+        background: #17795e;
+
+        .text {
+          color: transparent;
+        }
+
+        .icon {
+          width: 100%;
+
+          transform: translateX(0);
+        }
+      }
+
+      .button:active {
+        border: 1px solid #146c54;
+
+        .icon {
+          background-color: #146c54;
+        }
+      }
+    }
+  }
+
+  .detail_older {
+    // position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 1000px;
+    // overflow: hidden;
+    // transition: max-height 0.5s ease-out;
+    background-color: #ffffff;
+    padding-top: 20px;
+
+    .header-detail {
+      font-size: 17px;
+      font-weight: 400;
+      border-bottom: 1px solid rgb(255, 255, 255);
+      width: 100%;
+      display: flex;
+      text-align: center;
+      padding-bottom: 9px;
+      padding-top: 9px;
+      background-color: #ffffff;
+      height: 100%;
+
+      color: #959595;
+
+      .product {
+        width: 40%;
+        font-size: 24px;
+        font-weight: 600;
+        color: #552b08;
+      }
+
+      .unit-price {
+        width: 25%;
+      }
+
+      .quantity {
+        width: 10%;
+      }
+
+      .total {
+        width: 25%;
+      }
+    }
+
+    #cartSubTotal {
+      width: 100%;
+      font-size: 20px;
+      padding: 20px;
+      border-bottom: 1px solid gainsboro;
+      gap: 2%;
+      display: flex;
+      text-align: right;
+      flex-direction: row;
+      #text {
+        font-size: 19px;
+      }
+      #value {
+        font-size: 22px;
+        color: #ff0000;
+        span {
+          font-size: 16px;
+          font-weight: 100;
+          color: #7d7d7d;
+        }
+      }
+    }
+
+    .receiver_info {
+      padding: 20px;
+      .topic_user {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        color: #e86507;
+        // border-bottom: 5px solid #cf6700;
+        .icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // width: 50%;
+          // height: 100%;
+          transform: scale(2.5);
+          color: #ab5500;
+        }
+        #topic {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          font-size: 25px;
+          font-weight: 600;
+          #boder {
+            width: 50px;
+            height: 4px;
+            background-color: #ab5500;
+          }
+        }
+      }
+      p {
+        font-size: 16px;
+        color: #6c6c6c;
+        span {
+          font-size: 19px;
+          color: #000000;
+        }
+      }
+    }
+  }
+}

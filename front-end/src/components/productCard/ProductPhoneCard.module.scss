@@ -1,0 +1,73 @@
+.tech-specifications {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 14px; // Nhỏ gọn hơn
+  height: 100px; // Đảm bảo chiều cao cố định cho phần thông số kỹ thuật
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 6px; // Giảm khoảng cách giữa icon và text
+    color: #666;
+    margin: 4px 0; // Giảm khoảng cách giữa các dòng
+  }
+}
+
+.Card {
+  width: 280px; // Cố định chiều rộng
+  height: 450px; // Cố định chiều cao
+  padding: 12px;
+  margin: 16px auto;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  .button-container {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    width: 100%; /* Đảm bảo chiếm hết chiều rộng thẻ cha */
+  }
+}
+.buy-now-button {
+  display: block;
+  margin: 0 auto; /* Căn giữa nút */
+  width: 100%; /* Chiều rộng chiếm 70% */
+  max-width: 250px; /* Giới hạn chiều rộng tối đa */
+  padding: 12px 0; /* Khoảng cách dọc */
+  border-radius: 8px; /* Bo góc nhẹ */
+  font-size: 16px; /* Kích thước chữ vừa phải */
+  font-weight: bold; /* Chữ in đậm */ /* Màu chữ trắng */
+  text-align: center; /* Căn giữa chữ */
+  background: linear-gradient(
+    135deg,
+    #ff6f61,
+    #ff3e2f
+  ); /* Gradient nền cam-đỏ */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  transition: all 0.3s ease-in-out; /* Hiệu ứng mượt khi hover */
+
+  &:hover {
+    background: linear-gradient(
+      135deg,
+      #ff3e2f,
+      #ff6f61
+    ); /* Gradient đổi hướng khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Tăng bóng khi hover */
+  }
+
+  &:active {
+    background: linear-gradient(
+      135deg,
+      #e64436,
+      #cc3930
+    ); /* Màu gradient tối hơn khi nhấn */
+    transform: scale(1); /* Trở về kích thước ban đầu */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}

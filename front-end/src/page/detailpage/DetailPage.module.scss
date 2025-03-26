@@ -1,0 +1,345 @@
+.wrapper {
+  background-color: #f7f9fc; /* Nền trang nhạt hơn để làm nổi bật sản phẩm */
+  padding-bottom: 20px;
+
+  .main-detail {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Hỗ trợ responsive */
+    gap: 24px;
+    height: fit-content;
+
+    .images-product {
+      flex: 1;
+      margin-left: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 50%;
+      padding: 20px;
+      border: solid 1px #e0e0e0;
+      border-radius: 20px;
+      background-color: #fff;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+      .main-image {
+        width: 100%;
+        max-height: 400px; /* Đảm bảo ảnh chính không quá lớn */
+        object-fit: cover; /* Giữ tỉ lệ ảnh */
+        border-radius: 10px;
+        margin-bottom: 16px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+          transform: scale(1.05); /* Phóng to nhẹ khi hover */
+          box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Tạo bóng nổi bật */
+        }
+      }
+
+      .image-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Căn giữa danh sách ảnh */
+        gap: 12px; /* Khoảng cách giữa các ảnh nhỏ */
+        padding: 10px;
+
+        .image-item {
+          position: relative;
+          overflow: hidden;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: transform 0.3s, box-shadow 0.3s;
+
+          img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover; /* Đảm bảo cân đối hình ảnh */
+            border-radius: 10px;
+            border: 2px solid transparent; /* Viền mặc định trong suốt */
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+
+            &:hover {
+              transform: scale(1.1); /* Phóng to khi hover */
+              box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Tạo bóng nổi bật */
+              border-color: #ff7050; /* Viền màu cam nổi bật khi hover */
+            }
+          }
+
+          &::after {
+            /* Hiệu ứng mờ cam khi hover */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 112, 80, 0.2);
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+          }
+
+          &:hover::after {
+            opacity: 1; /* Hiện lớp mờ khi hover */
+          }
+
+          &.selected {
+            /* Ảnh đang được chọn */
+            border: 3px solid #ff7050;
+            transform: scale(1.1);
+            box-shadow: 0px 4px 10px rgba(255, 112, 80, 0.4);
+
+            img {
+              filter: brightness(100%); /* Giữ sáng ảnh khi chọn */
+            }
+          }
+        }
+      }
+    }
+
+    .information-detail {
+      flex: 1;
+      max-width: 100%;
+      border: solid 1px #e0e0e0;
+      border-radius: 20px;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      label {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #ff7050;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .radio-group {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 20px;
+
+        .color-option {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          .color-circle {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid #ccc;
+            transition: box-shadow 0.3s, transform 0.3s;
+            cursor: pointer;
+
+            &.selected {
+              box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+              transform: scale(1.2);
+              border-color: #ff7050;
+            }
+          }
+        }
+      }
+
+      .option-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 20px;
+
+        .option {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 1rem;
+          color: #333;
+          cursor: pointer;
+
+          input {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            margin-right: 8px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+
+            &:checked {
+              border-color: #ff7050;
+              box-shadow: 0px 4px 8px rgba(255, 112, 80, 0.5);
+            }
+          }
+
+          span {
+            transition: color 0.3s;
+          }
+
+          &:hover span {
+            color: #ff7050;
+          }
+        }
+      }
+
+      .name-product {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .rate {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+
+        h5 {
+          margin: 0;
+          color: #ff7050;
+          font-size: 1.2rem;
+          text-decoration: underline;
+        }
+
+        .MuiRating-root {
+          font-size: 1.5rem;
+        }
+      }
+
+      .price {
+        font-size: 1.8rem;
+        color: #ff7050;
+        font-weight: bold;
+        margin: 16px 0;
+        text-align: center;
+      }
+
+      .discount {
+        margin-top: 16px;
+        padding: 16px;
+        border: 1px dashed #ff7050;
+        border-radius: 8px;
+        background-color: #fff7f5;
+
+        .MuiTypography-root {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 8px;
+          color: #ff7050;
+          font-size: 1rem;
+        }
+
+        svg {
+          color: #ff7050;
+        }
+      }
+
+      .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 20px;
+
+        .MuiButton-root {
+          height: 50px;
+          font-size: 1rem;
+          font-weight: bold;
+          transition: background-color 0.3s;
+
+          &.MuiButton-contained {
+            background-color: #ff7050;
+
+            &:hover {
+              background-color: #e06040;
+            }
+          }
+
+          &.MuiButton-outlined {
+            color: #ff7050;
+            border-color: #ff7050;
+
+            &:hover {
+              background-color: #fff7f5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .technical-specifications {
+    margin-top: 20px;
+    border: solid 1px #ff7050;
+    border-radius: 12px;
+    padding: 16px;
+    background-color: #fff;
+    padding: 20px;
+    font-family: "Arial", sans-serif;
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+
+      th,
+      td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        font-size: 14px;
+      }
+
+      th {
+        background-color: #ff7050;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      tr:hover {
+        background-color: #fff7f5;
+      }
+    }
+  }
+
+  .rate {
+    margin-top: 24px;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+    .rate-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .wrapper-rate {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+
+      .MuiCard-root {
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+}
+.information-detail {
+}
