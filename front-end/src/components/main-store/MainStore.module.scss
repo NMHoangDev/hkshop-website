@@ -1,0 +1,230 @@
+$color: #cacaca;
+
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  margin: 0;
+  position: relative;
+
+  .notify {
+    @keyframes fade-in {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 40%;
+    animation: fade-in 1s ease-in-out forwards;
+  }
+
+  .slider-shop {
+    @keyframes fade-in-top {
+      from {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+    width: 100%;
+    height: 300px; /* Chiều cao hợp lý hơn */
+    background: linear-gradient(
+      135deg,
+      #ff7f50,
+      #ff6b3b
+    ); /* Gradient màu nền */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 36px;
+    letter-spacing: 1px;
+    animation: fade-in-top 1s ease-in-out forwards;
+  }
+
+  .main-shop {
+    display: flex;
+    flex-wrap: wrap; /* Đảm bảo responsive */
+    gap: 20px;
+
+    .categories {
+      @keyframes fade-in-left {
+        from {
+          opacity: 0;
+          transform: translateX(-100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0%);
+        }
+      }
+      flex: 1 1 250px;
+      max-width: 300px;
+      background-color: #f7f7f8;
+      padding: 20px;
+      border-radius: 8px;
+      animation: fade-in-left 1s ease-in-out forwards;
+
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: #393e46;
+        margin-bottom: 10px;
+      }
+
+      .gach-ngang {
+        width: 100%;
+        height: 1px;
+        background-color: #393e46;
+        opacity: 0.2;
+        margin: 10px 0;
+      }
+
+      .type-categories {
+        margin-bottom: 20px;
+
+        .type-element {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+
+          input {
+            width: 20px;
+            height: 20px;
+          }
+
+          label {
+            font-size: 16px;
+            color: #393e46;
+            margin-left: 10px;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+
+        &:first-of-type {
+          background-color: #ff7050;
+          color: #fff;
+
+          &:hover {
+            background-color: #e06040;
+          }
+        }
+
+        &:last-of-type {
+          margin-top: 10px;
+          background-color: #fff;
+          color: #ff7050;
+          border: 1px solid #ff7050;
+
+          &:hover {
+            background-color: #ffe6e1;
+          }
+        }
+      }
+    }
+
+    .list-Products {
+      flex: 3 1 700px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .sort-Bar {
+        background-color: #f7f7f8;
+        padding: 10px;
+        border-radius: 8px;
+
+        h1 {
+          font-size: 18px;
+          font-weight: bold;
+          color: #393e46;
+          text-align: center;
+        }
+      }
+
+      .product-Item-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 10px;
+        background-color: #f7f7f8;
+        border-radius: 8px;
+      }
+
+      .controller-Page {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        .MuiPagination-root {
+          .Mui-selected {
+            background-color: #ff7050 !important;
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .main-shop {
+      .categories {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      .list-Products {
+        flex: 1 1 100%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .slider-shop {
+      height: 250px;
+      font-size: 28px;
+    }
+
+    .categories {
+      .title {
+        font-size: 18px;
+      }
+    }
+
+    .list-Products {
+      .product-Item-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+  }
+}
