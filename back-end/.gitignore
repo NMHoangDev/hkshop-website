@@ -1,0 +1,37 @@
+# .env files
+.env
+.env.example
+
+# Node.js
+node_modules/
+
+# Laravel
+/vendor/
+
+# Composer
+composer.lock
+composer.json
+
+# IDEs
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Misc
+.DS_Store
+Thumbs.db
+
+# Public uploads (if exists)
+public/uploads/
+
+# Backup files
+*.bak
+*.swp
+
+# Temporary files
+*.tmp
+
+# Configuration files that are environment specific
+config/*.local
